@@ -12,9 +12,9 @@ set hidden
 " remember more commands and search history
 set history=10000
 set expandtab
-set tabstop=4
+set tabstop=2
 set shiftwidth=4
-set softtabstop=4
+set softtabstop=2
 set autoindent
 set laststatus=2
 set showmatch
@@ -72,7 +72,7 @@ augroup vimrcEx
     \ endif
 
   "for ruby, autoindent with two spaces, always expand tabs
-  autocmd FileType ruby,haml,eruby,yaml,html,javascript,scss,cucumber set ai sw=2 sts=2 et
+  autocmd FileType ruby,haml,eruby,yaml,html,javascript,scss,cucumber,coffee set ai sw=2 sts=2 et
   autocmd FileType python set sw=4 sts=4 et
 
   autocmd! BufRead,BufNewFile *.scss setfiletype scss 
@@ -180,19 +180,6 @@ function! PromoteToLet()
 endfunction
 :command! PromoteToLet :call PromoteToLet()
 :map <leader>p :PromoteToLet<cr>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TAB NAVIGATION 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- nnoremap 1 1gt
- nnoremap 2 2gt
- nnoremap 3 3gt
- nnoremap 4 4gt
- nnoremap 5 5gt
- nnoremap 6 6gt
- nnoremap 7 7gt
- nnoremap 8 8gt
- nnoremap 9 9gt
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " INLINE VARIABLE (SKETCHY)
