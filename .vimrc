@@ -17,6 +17,8 @@ set shiftwidth=4
 set softtabstop=2
 set autoindent
 set laststatus=2
+set splitbelow
+set splitright
 set showmatch
 set incsearch
 set hlsearch
