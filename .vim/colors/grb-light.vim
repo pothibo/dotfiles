@@ -20,9 +20,9 @@ hi CurrentWindow    ctermfg=NONE        ctermbg=lightgrey       cterm=NONE
 hi Cursor           ctermfg=black       ctermbg=white       cterm=reverse
 hi LineNr           ctermfg=darkgray
 
-hi VertSplit        ctermbg=darkgrey       ctermfg=black cterm=NONE
-hi StatusLine       ctermbg=darkgrey       ctermfg=white cterm=NONE
-hi StatusLineNC     ctermbg=darkgrey       ctermfg=black cterm=NONE
+hi VertSplit        ctermbg=black       ctermfg=black cterm=NONE
+hi StatusLine       ctermbg=gray   ctermfg=white cterm=NONE
+hi StatusLineNC     ctermbg=gray       ctermfg=black cterm=NONE
 
 hi Folded           ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Title            ctermfg=NONE        ctermbg=NONE        cterm=NONE
@@ -52,7 +52,7 @@ hi Search         ctermfg=NONE        ctermbg=NONE        cterm=underline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 hi Comment          ctermfg=darkgrey    ctermbg=NONE        cterm=NONE
 hi Todo             ctermfg=white       ctermbg=red         cterm=NONE
-hi Constant         ctermfg=green       ctermbg=NONE        cterm=NONE
+hi Constant         ctermfg=darkgreen   ctermbg=NONE        cterm=NONE
 
 hi Statement        ctermfg=blue        ctermbg=NONE        cterm=NONE
 hi Identifier       ctermfg=NONE        ctermbg=NONE        cterm=NONE
