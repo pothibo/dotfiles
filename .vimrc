@@ -143,10 +143,10 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ARROW KEYS ARE UNACCEPTABLE
+" ARROW KEYS ARE FOR TABS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <Left> <Nop>
-map <Right> <Nop>
+map <Left> :tabprevious<cr>
+map <Right> :tabnext<cr>
 map <Up> <Nop>
 map <Down> <Nop>
 
