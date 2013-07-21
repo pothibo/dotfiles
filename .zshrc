@@ -72,3 +72,5 @@ function up()
     test $DIR != "/" && echo $DIR/$TARGET
 }
 
+
+PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
