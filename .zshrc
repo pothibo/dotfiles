@@ -34,13 +34,14 @@ export SAVEHIST=$HISTSIZE
 setopt nobeep
 
 export EDITOR=vim
-# GNU Screen sets -o vi if EDITOR=vi, so we have to force it back. What the
-# hell, GNU?
-set -o emacs
 
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
+
+bindkey '^W' emacs-forward-word
+bindkey '^B' emacs-backward-word
+bindkey '^D' backward-delete-word
 
 export WORDCHARS='*?[]~&;!$%^<>'
 
