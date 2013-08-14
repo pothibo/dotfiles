@@ -40,3 +40,9 @@
 [submodule ".vim/bundle/html5"]
 	path = .vim/bundle/html5
 	url = https://github.com/othree/html5.vim.git
+[submodule ".vim/bundle/emmit"]
+	path = .vim/bundle/emmit
+	url = https://github.com/mattn/emmet-vim.git
+[submodule ".vim/bundle/vim-jst"]
+	path = .vim/bundle/vim-jst
+	url = https://github.com/briancollins/vim-jst.git
