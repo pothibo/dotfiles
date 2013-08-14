@@ -5,7 +5,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "grb-light"
+let colors_name = "pothibo-light"
 
 
 "hi Example         ctermfg=NONE        ctermbg=NONE        cterm=NONE
