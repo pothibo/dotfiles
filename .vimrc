@@ -231,51 +231,17 @@ function! ShowRoutes()
   " Delete empty trailing line
   :normal dd
 endfunction
+map <leader>f :CtrlP<cr>
 map <leader>gR :call ShowRoutes()<cr>
-map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
-map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
-map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
-map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
-map <leader>gd :CommandTFlush<cr>\|:CommandT app/decorators<cr>
-map <leader>gl :CommandTFlush<cr>\|:CommandT config/locales<cr>
-map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
-map <leader>gs :CommandTFlush<cr>\|:CommandT app/assets/stylesheets<cr>
-map <leader>gj :CommandTFlush<cr>\|:CommandT app/assets/javascripts<cr>
-map <leader>gf :CommandTFlush<cr>\|:CommandT features<cr>
+map <leader>gv :CtrlP app/views<cr>
+map <leader>gc :CtrlP app/controllers<cr>
+map <leader>gm :CtrlP app/models<cr>
+map <leader>gh :CtrlP app/helpers<cr>
+map <leader>gd :CtrlP app/decorators<cr>
+map <leader>gl :CtrlP config/locales<cr>
+map <leader>gs :CtrlP app/assets/stylesheets<cr>
+map <leader>gj :CtrlP app/assets/javascripts<cr>
 map <leader>gg :topleft 100 :split Gemfile<cr>
-map <leader>gt :CommandTFlush<cr>\|:CommandTTag<cr>
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
-map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" SWITCH BETWEEN TEST AND PRODUCTION CODE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! OpenTestAlternate()
-  let new_file = AlternateForCurrentFile()
-  exec ':e ' . new_file
-endfunction
-function! AlternateForCurrentFile()
-  let current_file = expand("%")
-  let new_file = current_file
-  let in_spec = match(current_file, '^spec/') != -1
-  let going_to_spec = !in_spec
-  let in_app = match(current_file, '\<controllers\>') != -1 || match(current_file, '\<models\>') != -1 || match(current_file, '\<views\>') != -1 || match(current_file, '\<helpers\>') != -1
-  if going_to_spec
-    if in_app
-      let new_file = substitute(new_file, '^app/', '', '')
-    end
-    let new_file = substitute(new_file, '\.rb$', '_spec.rb', '')
-    let new_file = 'spec/' . new_file
-  else
-    let new_file = substitute(new_file, '_spec\.rb$', '.rb', '')
-    let new_file = substitute(new_file, '^spec/', '', '')
-    if in_app
-      let new_file = 'app/' . new_file
-    end
-  endif
-  return new_file
-endfunction
-nnoremap <leader>. :call OpenTestAlternate()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RUNNING TESTS
@@ -334,12 +300,6 @@ function! RunTests(filename)
         end
     end
 endfunction
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Md5 COMMAND
-" Show the MD5 of the current buffer
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-command! -range Md5 :echo system('echo '.shellescape(join(getline(<line1>, <line2>), '\n')) . '| md5')
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OpenChangedFiles COMMAND
