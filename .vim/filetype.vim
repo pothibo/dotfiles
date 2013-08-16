@@ -1,10 +1,14 @@
 " markdown filetype file
 
-if exists("did\_load\_filetypes")
+if exists("did_load_filetypes")
 
  finish
 
 endif
+
+augroup filetypedetect
+    au BufRead,BufNewFile *html.erb setf html.erb
+augroup END
 
 augroup markdown
 
