@@ -4,6 +4,7 @@
     "d" = (insertText:, "–");
     "l" = (insertText:, "→");
     "h" = (insertText:, "←");
+    "q" = (insertText:, "```");
   };
 
   "~w" = "moveWordForward:";
