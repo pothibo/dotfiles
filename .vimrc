@@ -44,18 +44,15 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backspace=indent,eol,start
 " display incomplete commands
 set showcmd
-" Enable highlighting for syntax
-syntax on
-" Enable file type detection.
-" Use the default filetype settings, so that mail gets 'tw' set to 72,
-" 'cindent' is on in C files, etc.
-" Also load indent files, to automatically do language-dependent indenting.
-filetype indent on
 " use emacs-style tab completion when selecting files, etc
 set wildmode=longest,list
 " make tab completion for files/buffers act like bash
 set wildmenu
 let mapleader=","
+
+if $GOPATH != ""
+  set runtimepath+=$GOPATH/misc/vim
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR
@@ -179,3 +176,6 @@ map <leader>gs :CtrlP app/assets/stylesheets<cr>
 map <leader>gj :CtrlP app/assets/javascripts<cr>
 map <leader>gg :topleft 100 :split Gemfile<cr>
 
+" Load syntax at the end so everything is loaded.
+syntax on
+filetype indent on

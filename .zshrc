@@ -8,6 +8,10 @@ PROMPT="%{$fg[cyan]%}%n%{$reset_color%} at %{$fg[green]%}%m%{$reset_color%} in %
 
 RPS1='$(git_super_status)'
 
+if [ -f ~/.zshrc.usr ]; then
+  source ~/.zshrc.usr
+fi
+
 # Load RBEnv
 export RBENV_ROOT=/usr/local/var/rbenv
 
@@ -75,3 +79,4 @@ function up()
 
 
 PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
+
