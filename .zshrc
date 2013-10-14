@@ -15,10 +15,7 @@ fi
 # Load RBEnv
 export RBENV_ROOT=/usr/local/var/rbenv
 
-if [ -f /usr/local/opt/rbenv ]; then
-  if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-  source /usr/local/opt/rbenv/completions/rbenv.zsh
-fi
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
