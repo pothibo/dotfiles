@@ -19,3 +19,6 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
+
+" Rails stuff
+noremap <leader>r :topleft :split config/routes.rb<cr>
