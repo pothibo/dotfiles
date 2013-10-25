@@ -1,6 +1,7 @@
 " Text stuff
 syntax on
 set autoindent
+filetype plugin indent on
 
 
 " Let there be colors!
@@ -74,3 +75,7 @@ let mapleader=","
 
 " Mark trailing whitespace
 match Todo /\([N]OCOMMIT\)\|\(\(\t\|\s\)\+$\)/
+
+" Rails
+let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_rails = 1
