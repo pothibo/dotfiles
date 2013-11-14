@@ -12,9 +12,6 @@ if [ -f ~/.zshrc.usr ]; then
   source ~/.zshrc.usr
 fi
 
-# Load RBEnv
-export RBENV_ROOT=/usr/local/var/rbenv
-
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Set to this to use case-sensitive completion
