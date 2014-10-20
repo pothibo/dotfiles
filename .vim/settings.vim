@@ -36,32 +36,6 @@ set showtabline=1
 set winwidth=80
 
 
-set statusline=%1*\ %{GetCurrentName()}
-set statusline+=%2*\  "Space
-set statusline+=%2*\  "Space
-set statusline+=%2*\  "Space
-set statusline+=%<%2*in:%3*%{getcwd()}
-set statusline+=%2*\  "Space
-set statusline+=%4*\ %{strlen(&ft)?&ft:'none'}\ 
-set statusline+=%2*\  "Space
-set statusline+=%6*%{&readonly?'\ read-only\ ':''}
-set statusline+=%2*\  "Space
-set statusline+=%7*%{&modified?'\ Modified\ ':''}
-set statusline+=%2*%=
-set statusline+=%2*col:%4*%c
-set statusline+=%2*\  "Space
-set statusline+=%2*line:%4*%l 
-set statusline+=%2*\  "Space
-set statusline+=%2*total:%4*%L
-set statusline+=%2*\  "Space
-set statusline+=%2*\  "Space
-set statusline+=%2*\  "Space
-set statusline+=%2*\  "Space
-set statusline+=%2*\  "Space
-set statusline+=%2*%3*%{strlen(&fenc)?&fenc:'no\ encoding'}
-set statusline+=%2*\  "Space
-
-
 " Store temporary files in a central spot
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
@@ -79,3 +53,9 @@ match Todo /\([N]OCOMMIT\)\|\(\(\t\|\s\)\+$\)/
 " Rails
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
+
+" Airline
+let g:airline_powerline_fonts = 1
+
+" ctrlp
+let g:ctrlp_use_caching = 0
