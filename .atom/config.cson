@@ -1,0 +1,30 @@
+"*":
+  editor:
+    invisibles: {}
+    showInvisibles: true
+    preferredLineLength: 800
+  core:
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
+    ignoredNames: [
+      ".git"
+      ".svn"
+      ".DS_Store"
+    ]
+    useReactEditor: true
+    followSymlinks: true
+    disabledPackages: [
+      "tabs"
+    ]
+  "exception-reporting":
+    userId: "40a32188-9692-14ae-2466-f6b8f19249eb"
+  "release-notes":
+    viewedVersion: "0.75.0"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "cec8f622342d0cb444af586945e629cbe9f0bc03"
+  "tree-view":
+    hideVcsIgnoredFiles: true
