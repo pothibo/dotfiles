@@ -18,36 +18,15 @@ CASE_SENSITIVE="true"
 export TERM='xterm-color'
 alias ls='ls -G'
 alias ll='ls -lG'
-alias duh='du -csh'
-export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
-export GREP_OPTIONS="--color"
-
-# Unbreak history
-export HISTSIZE=100000
-export HISTFILE="$HOME/.history"
-export SAVEHIST=$HISTSIZE
 
 # No sound, does anyone wants that?
 setopt nobeep
 
 export EDITOR=vim
 
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey '\C-x\C-e' edit-command-line
-
 bindkey '^W' emacs-forward-word
 bindkey '^B' emacs-backward-word
 bindkey '^D' backward-delete-word
-
-export WORDCHARS='*?[]~&;!$%^<>'
-
-export ACK_COLOR_MATCH='red'
-
-# ACTUAL CUSTOMIZATION OH NOES!
-gd() { git diff $* | view -; }
-gdc() { gd --cached $*; }
-function cdf() { cd *$1*/ } # stolen from @topfunky
 
 if [[ -x $(which boot2docker) ]]; then
   eval $(boot2docker shellinit 2>/dev/null)
