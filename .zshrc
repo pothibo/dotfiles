@@ -1,12 +1,9 @@
-setopt PROMPT_SUBST
+autoload -U colors
+colors
 autoload -U promptinit; promptinit
-autoload -U colors; colors
 autoload -U compinit; compinit
 
-PROMPT="%{$fg[cyan]%}%n%{$reset_color%} at %{$fg[green]%}%m%{$reset_color%} in %{$fg[magenta]%}%~%{$reset_color%}
-%# "
-
-RPS1='$(git_super_status)'
+PROMPT="%{$fg[cyan]%}%n%{$reset_color%}:%{$fg[magenta]%}%~%{$reset_color%} %# "
 
 if [ -f ~/.zshrc.usr ]; then
   source ~/.zshrc.usr
@@ -51,27 +48,6 @@ export ACK_COLOR_MATCH='red'
 gd() { git diff $* | view -; }
 gdc() { gd --cached $*; }
 function cdf() { cd *$1*/ } # stolen from @topfunky
-
-python_module_dir () {
-    echo "$(python -c "import os.path as _, ${1}; \
-        print _.dirname(_.realpath(${1}.__file__[:-1]))"
-        )"
-}
-
-function up()
-{
-    if [ "$1" != "" -a "$2" != "" ]; then
-        local DIR=$1
-        local TARGET=$2
-    elif [ "$1" ]; then
-        local DIR=$PWD
-        local TARGET=$1
-    fi
-    while [ ! -e $DIR/$TARGET -a $DIR != "/" ]; do
-        DIR=$(dirname $DIR)
-    done
-    test $DIR != "/" && echo $DIR/$TARGET
-}
 
 if [[ -x $(which boot2docker) ]]; then
   eval $(boot2docker shellinit 2>/dev/null)
