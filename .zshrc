@@ -3,7 +3,12 @@ colors
 autoload -U promptinit; promptinit
 autoload -U compinit; compinit
 
+for file in ~/.zsh/*.zsh; do
+  source "$file"
+done
+
 PROMPT="%{$fg[cyan]%}%n%{$reset_color%}:%{$fg[magenta]%}%~%{$reset_color%} %# "
+RPS1="\$vcs_info_msg_0_"
 
 if [ -f ~/.zshrc.usr ]; then
   source ~/.zshrc.usr
