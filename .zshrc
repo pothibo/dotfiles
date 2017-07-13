@@ -44,3 +44,9 @@ PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$GOPATH/bin:$PATH"
 
 # added by travis gem
 [ -f /Users/pothibo/.travis/travis.sh ] && source /Users/pothibo/.travis/travis.sh
+
+# Fastlane
+export PATH="$HOME/.fastlane/bin:$PATH"
+
+export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"

@@ -20,6 +20,7 @@ set cursorline
 set encoding=utf-8
 set fileencoding=utf-8
 set backspace=indent,eol,start
+let mapleader=","
 
 
 " Searching
@@ -41,11 +42,13 @@ set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
+" Linting
+set noeol
 
-" Tab completion is a must
+" Menu
 set wildmenu
-let mapleader=","
-
+set wildmode=full
+:source $VIMRUNTIME/menu.vim
 
 " Mark trailing whitespace
 match Todo /\([N]OCOMMIT\)\|\(\(\t\|\s\)\+$\)/
@@ -59,3 +62,15 @@ let g:airline_powerline_fonts = 1
 
 " ctrlp
 let g:ctrlp_use_caching = 0
+
+" Syntactic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint_d'
