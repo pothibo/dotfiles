@@ -24,3 +24,8 @@ map <leader>gl :CtrlP config/locales<cr>
 map <leader>gs :CtrlP app/assets/stylesheets<cr>
 map <leader>gj :CtrlP app/assets/javascripts<cr>
 map <leader>gg :topleft 100 :split Gemfile<cr>
+
+" Syntastic
+map <leader>e :lopen<cr>
+map <leader>ne :lnext<cr>
+map <leader>np :lprev<cr>
