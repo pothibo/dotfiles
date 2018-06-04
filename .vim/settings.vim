@@ -22,6 +22,9 @@ set fileencoding=utf-8
 set backspace=indent,eol,start
 let mapleader=","
 
+" Netrw
+let g:netrw_banner=0
+
 
 " Searching
 set history=10000
