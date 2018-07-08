@@ -6,5 +6,7 @@ Plug 'https://github.com/vim-syntastic/syntastic'
 Plug 'https://github.com/vim-airline/vim-airline.git'
 Plug 'https://github.com/vim-ruby/vim-ruby.git'
 Plug 'https://github.com/tpope/vim-fugitive.git'
+Plug 'https://github.com/tpope/vim-rhubarb'
+Plug 'https://github.com/airblade/vim-gitgutter'
 
 call plug#end()

@@ -1,9 +1,6 @@
 " Editor
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 
-" Disabling arrows. Time to dig in
-map <leader>f :CtrlP<cr>
-
 " Documentation
 nnoremap <c-g> <c-]>
 
@@ -14,13 +11,15 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 
 " Rails stuff
-noremap <leader>r :topleft :split config/routes.rb<cr>
-map <leader>ga :FZF app/<cr>
-map <leader>gl :FZF lib/<cr>
-map <leader>gs :FZF spec<cr>
-map <leader>gc :FZF config<cr>
+map <leader>f :FZF <cr>
 
 " Syntastic
 map <leader>e :lopen<cr>
 map <leader>ne :lnext<cr>
 map <leader>np :lprev<cr>
+
+" Github
+map <leader>gw :Gbrowse<cr>
+map <leader>gb :Gblame<cr>
+map <leader>ga :GitGutterStageHunk<cr>
+map <leader>gr :GitGutterUndoHunk<cr>
