@@ -1,4 +1,3 @@
-/* ~/Library/KeyBindings/DefaultKeyBinding.dict */
 {
   "~s" = {
     "d" = (insertText:, "–");
@@ -7,6 +6,7 @@
     "q" = (insertText:, "```");
   };
 
+  "~ " = ("insertText:", " ");
   "~w" = "moveWordForward:";
   "~b" = "moveWordBackward:";
   "~<" = "moveToBeginningOfDocument:";
