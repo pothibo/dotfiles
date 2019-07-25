@@ -10,10 +10,6 @@ done
 PROMPT="%{$fg[cyan]%}%n%{$reset_color%}:%{$fg[magenta]%}%~%{$reset_color%} %# "
 RPS1="\$vcs_info_msg_0_"
 
-if [ -f ~/.zshrc.usr ]; then
-  source ~/.zshrc.usr
-fi
-
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Set to this to use case-sensitive completion
@@ -33,25 +29,20 @@ bindkey '^W' emacs-forward-word
 bindkey '^B' emacs-backward-word
 bindkey '^D' backward-delete-word
 
-if [[ -x $(which boot2docker) ]]; then
-  eval $(boot2docker shellinit 2>/dev/null)
+if [ -f ~/Develop ]; then
+  export GOPATH="$HOME/Develop/go"
 fi
 
-[ -d ~/Develop ] || mkdir ~/Develop
-
-export GOPATH="$HOME/Develop/go"
-PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$GOPATH/bin:$PATH"
-
-# added by travis gem
-[ -f /Users/pothibo/.travis/travis.sh ] && source /Users/pothibo/.travis/travis.sh
-
-# Fastlane
 export PATH="$HOME/.fastlane/bin:$PATH"
-
+export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/.yarn/bin:$PATH"
-export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
 export FZF_DEFAULT_COMMAND='
 (git ls-tree -r --name-only HEAD ||
   find . -path "*/\.*" -prune -o -type f -print -o -type l -print |
   sed s/^..//) 2> /dev/null'
+
+if [ -f ~/.zshrc.usr ]; then
+  source ~/.zshrc.usr
+fi
+

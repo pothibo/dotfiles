@@ -22,6 +22,7 @@ set fileencoding=utf-8
 set backspace=indent,eol,start
 let mapleader=","
 set updatetime=100
+set clipboard=unnamed
 
 " Netrw
 let g:netrw_banner=0
