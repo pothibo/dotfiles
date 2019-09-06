@@ -36,6 +36,7 @@ fi
 export PATH="$HOME/.fastlane/bin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 
 export FZF_DEFAULT_COMMAND='
 (git ls-tree -r --name-only HEAD ||
