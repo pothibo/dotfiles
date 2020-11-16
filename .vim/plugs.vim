@@ -8,5 +8,6 @@ Plug 'https://github.com/vim-ruby/vim-ruby.git'
 Plug 'https://github.com/tpope/vim-fugitive.git'
 Plug 'https://github.com/tpope/vim-rhubarb'
 Plug 'https://github.com/airblade/vim-gitgutter'
+Plug 'https://github.com/ngmy/vim-rubocop.git'
 
 call plug#end()
