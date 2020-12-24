@@ -23,6 +23,7 @@ set backspace=indent,eol,start
 let mapleader=","
 set updatetime=100
 set clipboard=unnamed
+set noswapfile
 
 " Netrw
 let g:netrw_banner=0
